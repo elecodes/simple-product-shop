@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Product Shop - Static Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .product { border: 1px solid #ddd; padding: 10px; margin: 10px; border-radius: 5px; }
+        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        button { background: blue; color: white; border: none; padding: 5px 10px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1 style="color: blue;">Simple Product Shop - Static Version</h1>
+    <p>If you can see this, the server is working correctly!</p>
+
+    <div style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        <h2>Products</h2>
+        <div class="products">
+            <div class="product">
+                <h3>Wireless Headphones</h3>
+                <p>$79.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>Smart Watch</h3>
+                <p>$199.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>Laptop Stand</h3>
+                <p>$49.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background: #f9f9f9;">
+        <h2>Cart</h2>
+        <p>Items in cart: 0</p>
+        <p>Subtotal: $0.00</p>
+    </div>
+</body>
+</html>

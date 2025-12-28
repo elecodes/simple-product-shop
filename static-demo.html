@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Product Shop - Static Version</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        .product-info {
+            padding: 1.5rem;
+        }
+        .product-title {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2563eb;
+            margin: 0 0 1rem 0;
+        }
+        .product-description {
+            color: #666;
+            margin: 0 0 1.5rem 0;
+            line-height: 1.5;
+        }
+        .add-to-cart-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        .add-to-cart-btn:hover {
+            background: #1d4ed8;
+        }
+        .cart-sidebar {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        .cart-title {
+            margin: 0 0 1rem 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .discount-notice {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        .status-success { background-color: #10b981; }
+        .status-warning { background-color: #f59e0b; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 style="margin: 0; font-size: 2rem;">🛒 Simple Product Shop</h1>
+            <p style="margin: 0.5rem 0 0 0; opacity: 0.9;">Static version - Server is working!</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div style="text-align: center; margin: 2rem 0;">
+            <h2 style="color: #10b981; margin-bottom: 0.5rem;">
+                <span class="status-indicator status-success"></span>
+                ✅ Server is Working Correctly!
+            </h2>
+            <p style="color: #666; font-size: 1.1rem;">
+                If you can see this page, the server is serving content properly.
+                <br>The React version should also work once JavaScript is enabled.
+            </p>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">🎧</div>
+                <div class="product-info">
+                    <h3 class="product-title">Wireless Headphones</h3>
+                    <p class="product-price">$79.99</p>
+                    <p class="product-description">High-quality wireless headphones with noise cancellation and premium sound.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">⌚</div>
+                <div class="product-info">
+                    <h3 class="product-title">Smart Watch</h3>
+                    <p class="product-price">$199.99</p>
+                    <p class="product-description">Feature-rich smart watch with health tracking and notifications.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">💻</div>
+                <div class="product-info">
+                    <h3 class="product-title">Laptop Stand</h3>
+                    <p class="product-price">$49.99</p>
+                    <p class="product-description">Ergonomic laptop stand for better posture and productivity.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">⌨️</div>
+                <div class="product-info">
+                    <h3 class="product-title">Mechanical Keyboard</h3>
+                    <p class="product-price">$129.99</p>
+                    <p class="product-description">RGB mechanical keyboard with tactile switches for gaming.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🔌</div>
+                <div class="product-info">
+                    <h3 class="product-title">USB-C Hub</h3>
+                    <p class="product-price">$39.99</p>
+                    <p class="product-description">Multi-port USB-C hub for connectivity and expansion.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">📹</div>
+                <div class="product-info">
+                    <h3 class="product-title">HD Webcam</h3>
+                    <p class="product-price">$89.99</p>
+                    <p class="product-description">1080p HD webcam perfect for video calls and streaming.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-sidebar">
+            <h2 class="cart-title">🛒 Shopping Cart</h2>
+            <p style="color: #666; margin: 1rem 0;">Your cart is empty</p>
+
+            <div class="discount-notice">
+                <h3 style="margin: 0 0 0.5rem 0; color: #92400e;">💰 Discount System</h3>
+                <ul style="margin: 0; padding-left: 1.2rem; color: #78350f;">
+                    <li><strong>Bulk Discount:</strong> 10% off when you add 5+ items</li>
+                    <li><strong>Order Discount:</strong> 15% off on orders over $100</li>
+                    <li><strong>Stackable:</strong> Both discounts can apply together!</li>
+                </ul>
+            </div>
+
+            <div style="border-top: 1px solid #eee; padding-top: 1rem; margin-top: 1rem;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                    <span>Subtotal:</span>
+                    <span style="font-weight: 600;">$0.00</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 1.25rem; font-weight: bold; color: #2563eb;">
+                    <span>Total:</span>
+                    <span>$0.00</span>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 3rem 0; padding: 2rem; background: #f0f8ff; border-radius: 12px; border: 1px solid #b3d9ff;">
+            <h3 style="color: #1e40af; margin-bottom: 1rem;">🔧 Troubleshooting</h3>
+            <p style="color: #374151; margin-bottom: 1rem;">
+                If the React version isn't loading, try:
+            </p>
+            <ul style="color: #4b5563; text-align: left; display: inline-block;">
+                <li>Open browser developer tools (F12)</li>
+                <li>Check the Console tab for errors</li>
+                <li>Disable browser extensions temporarily</li>
+                <li>Try a different browser (Chrome, Firefox, Edge)</li>
+                <li>Ensure you're accessing http://127.0.0.1:3000/</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
