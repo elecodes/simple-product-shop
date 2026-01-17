@@ -20,6 +20,7 @@ export class FixedAmountCouponStrategy implements CouponStrategy {
     return subtotal > 0
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   calculate(_items: CartItem[], _subtotal: number): number {
     return this.amount
   }
